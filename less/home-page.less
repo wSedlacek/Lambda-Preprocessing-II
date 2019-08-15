@@ -27,6 +27,22 @@
         border-radius: 10px;
       }
     }
+
+    @media @mobile {
+      .text-content {
+        width: 100%;
+        padding-right: auto;
+      }
+
+      .img-content {
+        width: 100%;
+        padding-left: 0;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 
   .inverse-content {
@@ -42,6 +58,11 @@
       padding-right: 1%;
       padding-left: 0;
     }
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   .content-destination {
@@ -50,6 +71,10 @@
 
     img {
       border-radius: 10px;
+    }
+
+    @media @mobile {
+      width: 100%;
     }
   }
 
@@ -62,6 +87,20 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+    }
+
+    @media @mobile {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+
+      .destination {
+        width: 80%;
+
+        .btn {
+          .button-setup(@button-mobile, white, 100%, 45px);
+        }
+      }
     }
   }
 } // home
