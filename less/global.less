@@ -1,3 +1,5 @@
+// main: index.less
+
 * {
   box-sizing: border-box;
 }
@@ -6,16 +8,24 @@ html {
   font-size: 62.5%;
 }
 
-html, body {
+html,
+body {
   font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Indie Flower', cursive;
 }
 
 h1 {
   font-size: 4rem;
+  @media @mobile {
+    font-size: 3rem;
+  }
 }
 
 h2 {
@@ -43,4 +53,13 @@ img {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+
+  @media @mobile {
+    max-width: 90vw;
+    margin: 0 25px;
+  }
+}
+
+.btn {
+  .button-setup();
 }
